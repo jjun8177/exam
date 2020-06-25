@@ -1,6 +1,3 @@
-## q0. (example) Vowel count
-# Count the vowels in ther string
-# Input: lowercase letters only.
 def get_count(input_str):
     pass
 

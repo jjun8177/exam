@@ -1,4 +1,4 @@
-# Coding Exam: Part I
+# Coding Exam: Problems
 ---
 ## q1. Square Every Digit
 You are asked to square every digit of a number.
@@ -16,7 +16,7 @@ There is a queue for the self-checkout tills at the supermarket. Your task is wr
 #### output
 The function should return an integer, the total time required.
 
-### Examples
+#### Examples
 ```Python
 queue_time([5,3,4], 1)
 # should return 12
@@ -62,7 +62,7 @@ a.magnitude # returns a number that is the magnitude (geometric length) of vecto
 a.cross(b) # returns a new Vector that is the cross product of a and b 
 a.dot(b) # returns a number that is the dot product of a and b
 a.to_tuple() # returns a tuple representation of the vector.
-str(a) # returns a string representation of the vector in the form "<a, b, c>"
+str(a) # returns a string representation of the vector in the form "<x, y, z>"
 ```
 
 See [Vector calculus: cross/dot product](https://betterexplained.com/articles/cross-product/)
@@ -116,3 +116,14 @@ most_frequent_days(2427) == ['Friday']
 most_frequent_days(2185) == ['Saturday']
 most_frequent_days(2860) == ['Thursday', 'Friday']
 ```
+
+## clients.py:  Multiple echo clients - I/O multiplexing version
+The code given in https://github.com/jinpyohong/np/blob/master/echo/clients/clients.py runs multiple echo clients in parallel by taking advatage of multi-threading.
+
+Referring to this code, you are requested to implement the same bebavior with the altenative way: I/O multiplexing. The script file name should be `clients.py`.
+
+**Usage**:
+```bash
+$ python clients.py host:port <# of messages> [n]   # run n(=3, default) clients
+```
+> 참고: Non-blocking으로 `select`를 사용할 때, file-like socket object (`makefile`)을 사용하면 안된다. `send`, `recv` socket API를 사용해야 함.

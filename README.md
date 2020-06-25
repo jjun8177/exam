@@ -24,7 +24,7 @@ $ pytest q0_test.py
 
 To test all files with starting or ending with 'test' name in the current directory :
 ```bash
-$ pytest .
+$ pytest
 ```
 
 > 참고: pytest를 실행할 때는 stdout, stderr로 output이 print되지 않는다. 
@@ -37,3 +37,15 @@ if __name__ == '__main__':
 ```
 
 > 이렇게 해도 pytest 실행에 영향이 없다. 이 script 파일은 pytest에서 main으로 실행되지 않고 module로 import되기 때문.
+
+## Local Repository 이용하여 문제를 푼다.
+문제를 푸는 과정에 여러분이 clone한 local repository에서 새로운 commit들을 만들 수 있다. (물론, 원본이 있는 jinpyohong's repository에 push는 허용되지 않는다.)
+
+## 답안 제출
+변경사항을 모두 commit한다. 그리고, git repository 포함하는 폴더 전체(여기서는 exam directory)을 zip으로 압축한 exam.zip 파일을 eclass에 upload한다.
+다시 말해, local repository와 working copy 모두를 제출하는 것이다.
+
+## 배점
+- q1, q2, q3: 각 10점
+- q4, q5, q6: 각 15점
+- clients.py: 25점
